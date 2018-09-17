@@ -45,10 +45,18 @@ class _HelloYouState extends State<HelloYou> {
                 });
               },
             ),
+            DropdownButton<String>(
+              items: ['Dollars', 'Idr', 'Euro', 'Ponds'].map((String value){
+                return DropdownMenuItem<String> (
+                  value: value,
+                  child: Text(value)
+                );
+              }).toList(),onChanged: (String Value) {},
+              ),
             Text('Hello' + name + '!')
           ],
         ),
-      )
+      ),
     );
   }
 }
